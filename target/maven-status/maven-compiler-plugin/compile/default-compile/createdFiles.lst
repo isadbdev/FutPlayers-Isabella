@@ -1,0 +1,8 @@
+com\mycompany\futplayers\service\ClubeService.class
+com\mycompany\futplayers\service\ConfederacaoService.class
+com\mycompany\futplayers\model\Confederacao.class
+com\mycompany\futplayers\model\Jogador.class
+com\mycompany\futplayers\model\Tecnico.class
+com\mycompany\futplayers\FutPlayers.class
+com\mycompany\futplayers\model\Competicao.class
+com\mycompany\futplayers\model\Clube.class
