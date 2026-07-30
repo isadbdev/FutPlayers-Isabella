@@ -1,6 +1,6 @@
-com\mycompany\futplayers\Tecnico.class
 com\mycompany\futplayers\Clube.class
 com\mycompany\futplayers\Competicao.class
+com\mycompany\futplayers\model\Tecnico.class
 com\mycompany\futplayers\FutPlayers.class
 com\mycompany\futplayers\ClubeService.class
 com\mycompany\futplayers\Jogador.class
