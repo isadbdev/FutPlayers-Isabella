@@ -2,6 +2,7 @@ package com.mycompany.futplayers;
 
 import com.mycompany.futplayers.model.Tecnico;
 import com.mycompany.futplayers.model.Jogador;
+import com.mycompany.futplayers.model.Confederacao;
 
 public class FutPlayers {
     public static void main(String[] args) {
