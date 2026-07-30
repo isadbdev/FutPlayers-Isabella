@@ -1,28 +1,17 @@
-package com.mycompany.futplayers.service;
+package com.mycompany.futplayers;
 
-import com.mycompany.futplayers.model.*;
+import java.util.ArrayList;
 
 public class ConfederacaoService {
+    public ArrayList<Confederacao> confederacoes = new ArrayList<>();
 
-    public Confederacao criarConfederacao(String nome, String pais, String continente, String presidente) {
-        return new Confederacao(nome, pais, continente, presidente);
+    public void adicionarConfederacao(Confederacao c) {
+        confederacoes.add(c);
     }
 
-    public Competicao criarCompeticao(Confederacao confederacao, String nome) {
-        Competicao competicao = new Competicao(nome, confederacao);
-        confederacao.adicionarCompeticao(competicao);
-        return competicao;
-    }
-
-    public void inscreverClubeEmCompeticao(Clube clube, Competicao competicao) {
-        competicao.adicionarClube(clube);
-    }
-
-    public void removerCompeticao(Confederacao confederacao, Competicao competicao) {
-        confederacao.removerCompeticao(competicao);
-    }
-
-    public void listarCompeticoes(Confederacao confederacao) {
-        System.out.println("Competições da confederação " + confederacao.getNome() + ": " + confederacao.getCompeticoesOrganizadas());
+    public void listarConfederacoes() {
+        for (Confederacao c : confederacoes) {
+            System.out.println("Confederação: " + c.nome + " Presidente: " + c.presidente + " Continente: " + c.continente);
+        }
     }
 }
