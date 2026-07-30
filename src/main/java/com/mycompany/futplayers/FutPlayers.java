@@ -9,42 +9,34 @@ import com.mycompany.futplayers.service.ConfederacaoService;
 
 public class FutPlayers {
     public static void main(String[] args) {
-        // Criando técnico e jogadores
         Tecnico tecnico = new Tecnico("Filipe Luís", "Flamengo");
         Jogador j1 = new Jogador("Pedro Guilherme", 27, "Flamengo", 80.0, "Brasil");
         Jogador j2 = new Jogador("Arrascaeta", 30, "Flamengo", 72.0, "Uruguai");
 
-        // Criando clube, confederação e competição
         Clube clube = new Clube("Flamengo", "BAP", "Filipe Luís");
         Confederacao conf = new Confederacao("CBF", "Ednaldo Rodrigues", "América do Sul");
         Competicao comp = new Competicao("Brasileirão");
 
-        // Services
         ClubeService clubeService = new ClubeService();
         ConfederacaoService confService = new ConfederacaoService();
 
-        // Cadastro de clube
         clubeService.adicionarClube(clube);
         System.out.println("\n--- Lista de Clubes ---");
         clubeService.listarClubes();
 
-        // Remoção de clube
         clubeService.removerClube(clube);
         System.out.println("\n--- Lista de Clubes após remoção ---");
         clubeService.listarClubes();
 
-        // Cadastro de confederação
         confService.adicionarConfederacao(conf);
         System.out.println("\n--- Lista de Confederações ---");
         confService.listarConfederacoes();
 
-        // Remoção de confederação
         confService.removerConfederacao(conf);
         System.out.println("\n--- Lista de Confederações após remoção ---");
         confService.listarConfederacoes();
 
-        // Exibindo informações gerais
-        System.out.println("\n--- Informações Gerais ---");
+        System.out.println("\n---Informações Gerais ---");
         System.out.println("Técnico: " + tecnico.getNome() + " | Clube: " + tecnico.getClube());
         System.out.println("Jogador: " + j1.getNome() + " | Idade: " + j1.getIdade() + " | Peso: " + j1.getPeso() + " | Nacionalidade: " + j1.getNacionalidade());
         System.out.println("Jogador: " + j2.getNome() + " | Idade: " + j2.getIdade() + " | Peso: " + j2.getPeso() + " | Nacionalidade: " + j2.getNacionalidade());
